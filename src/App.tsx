@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+
+import { Dashboard, Landing } from './pages';
+
 import './App.css';
 
 function App() {
+  const [user] = useState(true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen bg-white">
+      {user ? <Landing /> : <Dashboard />}
     </div>
   );
 }
