@@ -1,0 +1,3 @@
+.options {
+  @apply absolute mt-2 bg-white w-full py-1 z-10 rounded-md top-full;
+}

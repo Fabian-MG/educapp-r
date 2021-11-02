@@ -2,34 +2,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ReactComponent as DesktopLaptop } from "../assets/images/illustration-editor-desktop.svg";
 import { ReactComponent as IllustrationPhones } from "../assets/images/illustration-phones.svg";
 import { ReactComponent as Desktop } from "../assets/images/illustration-laptop-desktop.svg";
+import { Link } from 'react-router-dom';
 
 
 
 export const Landing = () => {
     return (
         <div className="h-full">
-            
             <div className="w-full h-16 pt-12 px-36 fixed flex items-center justify-between">
                 <div className="flex w-2/3">
                     <h1 className="mr-12 text-3xl text-white font-semibold">Educapp</h1>
                     <div className="flex justify-between items-end">
                         <div className="mr-6 text-gray-100">
-                            <a className="mr-1 text-base" href="#n"> Product </a>
+                            <Link to="/" className="mr-1 text-base" href="#n"> Product </Link>
                             <FontAwesomeIcon className="text-white text-xs" icon={["fas", "chevron-down"]}/>
                         </div>
                         <div className="mr-6 text-gray-100">
-                            <a className="mr-1 text-base" href="#n"> Company </a>
+                            <Link to="/" className="mr-1 text-base" href="#n"> Company </Link>
                             <FontAwesomeIcon className="text-white text-xs" icon={["fas", "chevron-down"]}/>
                         </div>
                         <div className="mr-6 text-gray-100">
-                            <a className="mr-1 text-base" href="#n"> Connect </a>
+                            <Link to="/contacto" className="mr-1 text-base" href="#n"> Connect </Link>
                             <FontAwesomeIcon className="text-white text-xs" icon={["fas", "chevron-down"]}/>
                         </div>
                     </div>
                 </div>
                 <div className="">
-                    <button className="py-2 text-base font-normal w-24 text-white mr-4">Login</button>
-                    <button className="py-2 text-base font-normal w-24 text-white bg-orange-light rounded-lg mr-4">Sign Up</button>
+                    <Link to="/precios" className="py-2 text-base font-normal w-24 text-white mr-4">Precios</Link>
+                    <button className="py-2 text-base font-normal w-24 text-white bg-orange-light rounded-lg mr-4">Login</button>
                 </div>
             </div>
 
