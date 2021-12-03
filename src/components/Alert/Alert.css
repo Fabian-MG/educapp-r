@@ -1,0 +1,9 @@
+.alert {
+  @apply absolute p-4 w-96 rounded-lg z-50 top-4 right-0 flex items-start shadow-lg border border-gray-100 bg-white;
+  transform: translateX(110%);
+  transition: transform 0.5s ease-out;
+}
+
+.alert.active {
+  transform: translateX(-5%);
+}
