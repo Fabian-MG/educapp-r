@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useBackground } from "../../hooks"
+import { Button } from "../Button/Button"
 
-export const ProfileHeader = () => {
+export const ProfileHeader = ({student, handleEdit}: any) => {
     const image: any = useBackground('landscape')
     return (
         <div>
@@ -14,22 +14,17 @@ export const ProfileHeader = () => {
                     <div className="flex  ">
                         <div 
                             className="w-16 h-16 rounded-full bg-cover " 
-                            style={{backgroundImage: `url("https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")`}} 
+                            style={{backgroundImage: `url("${student.image}")`}} 
                         />
                         <div className="px-4 flex flex-col justify-center">
-                            <p className="text-xl text-main-font font-semibold">Fabian Alejandro Miranda Garcia</p>
-                            <p className="text-sm text-main-light">Ingenieria en Sistemas Computacionales</p>
+                            <p className="text-xl text-main-font font-semibold">{student.name}</p>
+                            <p className="text-sm text-main-light">{student.career}</p>
                         </div>
                     </div>
 
                     <div className="flex justify-center items-center">
-                        <button
-                            type="button"
-                            className="inline-flex items-center px-4 py-2 rounded-md shadow-sm text-sm font-medium text-white bg-ora-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        >
-                            <FontAwesomeIcon icon={["fas", "pen-fancy"]} className="-ml-1 mr-2 h-5 w-5 text-white" aria-hidden="true" />
-                            Calificar
-                        </button>
+                        
+                        <Button title="Calificar" icon="pen-fancy" onClick={handleEdit}/>
                     </div>
                 </div>
             </div>

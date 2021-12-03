@@ -23,7 +23,6 @@ export function Select() {
         <div className="px-4 py-2 flex justify-between rounded-md shadow-sm items-center bg-white">
             <div id="selected-value" className="flex flex-col">
                 <p className="text-sm font-medium text-main-font">{selelection.name}</p>
-                {/* <p className="text-xs text-main-medium">ITQ</p> */}
             </div>
             <div id="chevrons" className="flex flex-col w-max text-xs text-ora-500 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                 <FontAwesomeIcon icon={["fas", "chevron-up"]}/>

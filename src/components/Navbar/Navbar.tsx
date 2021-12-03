@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { useAuth } from "../../context/Auth";
 
 
 export const Navbar = () => {
+
+  // const { signOff } = useAuth()
 
   return (
     <nav className="w-full h-16 px-9 bg-white border-b flex justify-between items-center">
@@ -18,24 +21,15 @@ export const Navbar = () => {
             type="text"
             name="company-website"
             id="company-website"
-            className="flex-1 block w-full rounded-none rounded-r-md sm:text-sm"
+            className="flex-1 block w-full rounded-none rounded-r-md sm:text-sm border border-gray-50 focus:ring-0d"
             placeholder="Buscar"
           />
         </div>
       </div>
       
       <div className="flex justify-center items-center text-gray-500">
-        <FontAwesomeIcon className="text-sm" icon={["fas", "chevron-down"]}/>
+        <FontAwesomeIcon className="text-sm cursor-pointer" icon={["fas", "chevron-down"]}/>
       </div>
     </nav>
   );
 };
-
-
-{/* <div className="flex-shrink-0 flex items-center">
-          <div className="cursor-pointer">
-            <div className="border-t-2 border-gray-400 w-5 mb-1"> </div>
-            <div className="border-t-2 border-gray-400 w-5 mb-1"> </div>
-            <div className="border-t-2 border-gray-400 w-5 mb-1"> </div>
-          </div>
-        </div> */}

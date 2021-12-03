@@ -1,4 +1,4 @@
-import { Children, FC, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 interface TableProps {
     children?: JSX.Element
@@ -6,8 +6,10 @@ interface TableProps {
 
 const Table = ({children}: TableProps) => {
     return (
-        <div className="flex flex-col p-4 bg-white w-full rounded-lg shadow-sm">   
-            {children}
+        <div className="bg-white  overflow-hidden rounded-lg shadow-sm">  
+            <div className="max-w-full overflow-x-scroll"> 
+                {children}
+            </div>
         </div>
     )
 }
@@ -18,6 +20,7 @@ const Grid: React.FC<{columns: any, data?: any}> = ({columns, data, children}) =
 
     useEffect(() => {
         setGroups(columns)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [columns])
 
     const setGroups = (cols: any) => {
@@ -37,20 +40,20 @@ const Grid: React.FC<{columns: any, data?: any}> = ({columns, data, children}) =
     }
 
     return (
-        <table>
+        <table className="w-full">
             <Header>
                 {parents &&
                     <Row>
-                        { parents.map((column: any) => (
-                            <Column colspan={column.colspan}>
+                        { parents.map((column: any, idx: number) => (
+                            <Column key={`key-${idx}`} colspan={column.colspan}>
                                 {column.header}
                             </Column>
                         ))}
                     </Row>
                 }
                 <Row>
-                    { child.length > 0 && child.map((column: any) => (
-                        <Column>
+                    { child.length > 0 && child.map((column: any, idx: number) => (
+                        <Column key={`key-${idx}`}>
                             {column.header}
                         </Column>
                     ))}
@@ -59,8 +62,8 @@ const Grid: React.FC<{columns: any, data?: any}> = ({columns, data, children}) =
 
             { children ? children : 
                 <Body>
-                    {data.map((row: any) => (
-                        <Row>
+                    {data.map((row: any, idx: number) => (
+                        <Row key={`key-${idx}`}>
                             {child.map((column: any) => (
                                 <Cell> 
                                     {row[column.accessor]}
@@ -81,7 +84,7 @@ const Header: React.FC = ({children}) => (
 )
 
 const Body: React.FC = ({children}) => (
-    <tbody className="bg-white divide-y divide-gray-200">
+    <tbody className="bg-white divide-y divide-gray-200 w-full">
         {children}
     </tbody>
 )
@@ -99,7 +102,7 @@ const Row: React.FC = ({children}) => (
 )
 
 const Cell: React.FC = ({children}) => (
-    <td className="px-6 py-4 whitespace-nowrap">
+    <td className="px-6 py-4 ">
             {children}
     </td>
 )

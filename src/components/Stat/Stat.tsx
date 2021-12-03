@@ -10,7 +10,7 @@ interface ReferenceProps extends Props {
 
 const Stat = ({children}: Props) => {
     return (
-        <div className="flex flex-col w-80 flex-shrink bg-white rounded-md shadow-md overflow-hidden">
+        <div className="flex flex-col col-span-3 md:col-span-1 mb-1 flex-shrink bg-white rounded-md shadow-md overflow-hidden">
             {children}
         </div>
     )
