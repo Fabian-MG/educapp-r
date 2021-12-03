@@ -18,7 +18,7 @@ export const ProfileHeader = () => {
                         </div>
                     }
                     <div className="flex flex-col items-start p-3">
-                        <span className="text-gray-600 text-xs md:text-sm font-medium" >Bievenido,</span>
+                        <span className="text-gray-600 text-xs md:text-sm font-medium" >Bienvenido,</span>
                         <span className="text-gray-900 text-lg md:text-xl font-bold">{user.displayName}</span>
                         <span className="text-gray-600 text-xs md:text-sm font-medium">Instituto Tecnológico de Querétaro</span>
                     </div>

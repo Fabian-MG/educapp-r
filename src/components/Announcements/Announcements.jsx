@@ -7,8 +7,8 @@ export const Announcements = () => {
                 Notificaciones
             </div>
             <div className="py-4 border-b border-gray-200">
-                <h4 className="text-sm mb-1 font-semibold">Periodo de entrega terminada</h4>
-                <p className="text-sm text-gray-500">El periodo de entrega para la tarea Ensayo 1 de la clase <span className="font-semibold">Química</span> </p>
+                <h4 className="text-sm mb-1 font-semibold">Período de entrega terminada</h4>
+                <p className="text-sm text-gray-500">El período de entrega para la tarea Ensayo 1 de la clase <span className="font-semibold">Química</span> </p>
             </div>
             <div className="py-4 mb-3">
                 <h4 className="text-sm mb-1 font-semibold">Reportes de unidad</h4>

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 
-export const SignIn = ({signIn, changeToSignUp, changeToForgot, updateFormState, loading}) => {
+export const SignIn = ({signIn, changeToSignUp, updateFormState, loading}) => {
     return (
         <div className="flex w-5/6 flex-col  justify-center items-center">
             <div className="w-full py-3 text-center">
@@ -40,12 +40,7 @@ export const SignIn = ({signIn, changeToSignUp, changeToForgot, updateFormState,
                 <Input label='Contraseña' name="password" required type="password" handleChange={(e) => { e.persist(); updateFormState(e)}} />
               </div>
               <div className="flex justify-between items-center my-3 ">
-                <div className="">
-                  <label className="text-gray-600 mr-2">Recordarme</label> <input type="checkbox" className="rounded-md border border-gray-400 ring-0 focus:outline-none"/>
-                </div>
-                <span className="cursor-pointer text-ora-500 text-right font-medium" onClick={changeToForgot}>
-                  Olvidaste tu contraseña?
-                </span>
+               
               </div>
               <Button title="Iniciar sesión" loading={loading} onClick={signIn}/>
             </form>

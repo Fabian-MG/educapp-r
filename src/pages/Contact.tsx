@@ -7,7 +7,7 @@ export const Contact = () => {
                 <div className="w-5/6 md:w-4/6 h-5/6 px-16 z-30">
                     <div className="flex flex-col text-center items-center">
                         <h1 className="font-bold text-4xl">Contacta a nuestro equipo</h1>
-                        <h3 className="mt-6 text-lg font-light text-gray-400">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu</h3>
+                        <h3 className="mt-6 text-lg font-light text-gray-400">Si tienes alguna duda, ponte en contacto con nuestro equipo y te atenderemos</h3>
                     </div>
                     <div className="w-full py-6">
                         <form className="w-full pt-2">
