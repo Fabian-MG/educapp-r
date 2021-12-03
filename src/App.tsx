@@ -1,17 +1,14 @@
-import { useState } from 'react';
 import { AuthApp } from './AuthApp';
 import { UnauthApp } from './UnauthApp';
 
 import './App.css';
+import { useAuth } from './context/Auth';
 
 function App() {
-  const [user] = useState(true)
+  const { user } = useAuth()
 
-  return (
-    <div className="w-screen h-screen flex overflow-x-hidden">
-      {user ? <AuthApp /> : <UnauthApp />}
-    </div>
-  )
+  return user ? <AuthApp /> : <UnauthApp />
+
 }
 
 export default App;
