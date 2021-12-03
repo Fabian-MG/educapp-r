@@ -14,6 +14,7 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       green: colors.green,
+      blue: colors.blue,
       main: {
         DEFAULT: "#f3f4f6",
         font: "#131929",
@@ -48,5 +49,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
