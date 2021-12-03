@@ -3,16 +3,16 @@ import React from 'react'
 
 export const Prices = () => {
     return (
-        <div className="w-full h-full relative">
-            <div className="absolute w-full h-3/4 bg-orange" style={{zIndex: -10}}/>
-            <div className="py-20 px-9">
-                <div className="text-center">
-                    <h4 className="text-white text-xl font-medium ">PRICING</h4>
-                    <h1 className="text-white text-6xl font-bold mt-4 mb-6">The right price for you, whoever you are</h1>
-                    <h2 className="text-white text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sed, est asperiores nam nisi</h2>
+        <div className="w-screen h-screen relative">
+            <div className="absolute w-full h-3/4 z-0"/>
+            <div className="pb-20">
+                <div className="text-center py-20 px-4 bg-orange">
+                    <h4 className="text-white text-lg md:text-xl font-medium ">PRICING</h4>
+                    <h1 className="text-white text-2xl md:text-6xl font-bold mt-4 mb-6">The right price for you, whoever you are</h1>
+                    <h2 className="text-white text-lg md:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sed, est asperiores nam nisi</h2>
                 </div>
-                <div className="flex justify-center items-center pt-16">
-                    <div className="flex flex-col justify-start bg-white w-2/5 mr-6 shadow-sm rounded-lg">
+                <div className="px-4 flex flex-col md:flex-row justify-center items-center pt-10">
+                    <div className="flex flex-col border border-gray-100 justify-start bg-white w-full md:w-2/5 mr-6 shadow-md rounded-lg">
                         <div className="p-12">
                             <div className="mb-5 bg-gray-100 text-gray-900 w-max py-1 px-4 rounded-full text-center  font-semibold">INDIVIDUAL</div>
                             <div>
@@ -37,7 +37,7 @@ export const Prices = () => {
                                 </button>
                             </div>
                     </div>
-                    <div className="flex flex-col  justify-start bg-white w-2/5 shadow-sm rounded-lg">
+                    <div className="flex flex-col border border-gray-100  justify-start bg-white w-full md:w-2/5 shadow-md rounded-lg">
                         <div className="p-12">
                             <div className="mb-6 bg-gray-100 text-gray-900 w-max py-1 px-4 rounded-full text-center font-semibold">INSTITUCIONAL</div>
                             <div>
@@ -63,13 +63,13 @@ export const Prices = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center pt-8">
-                    <div className="flex py-9 px-12 bg-gray-50 rounded-lg shadow-sm w-5/6">
-                        <div className="w-9/12">
+                <div className="flex px-4 justify-center items-center pt-8">
+                    <div className="flex flex-col justify-center items-center md:flex-row py-9 px-12 bg-gray-50 rounded-lg shadow-md w-full md:w-5/6">
+                        <div className="w-9/12 flex flex-col justify-center items-center">
                             <div className="w-32 mb-5 shadow-sm bg-white text-grayish-dark-blue py-1 px-4 rounded-full text-center  font-semibold">PRUEBA</div>
-                            <p className="text-lg text-gray-600">Get full access to all of standard license features for solo projects with a <span className="font-bold">Free Trial</span></p>
+                            <p className="text-lg text-justify md:text-left text-gray-600">Get full access to all of standard license features for solo projects with a <span className="font-bold">Free Trial</span></p>
                         </div>
-                        <div className="w-auto flex justify-center items-center">
+                        <div className="w-auto flex justify-center items-center mt-4 md:mt-0">
                             <button className="bg-white rounded-lg py-4 px-8 text-lg shadow-md font-semibold">Prueba Gratis</button>
                         </div>
                     </div>

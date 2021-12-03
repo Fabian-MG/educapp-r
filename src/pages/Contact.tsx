@@ -4,7 +4,7 @@ export const Contact = () => {
         <div className="relative w-full flex justify-center items-center">
                 <div className="backg w-56 h-96 absolute left-0 top-10"/>
                 <div className="backg w-56 h-96 absolute bottom-0 right-0"/>
-                <div className="w-3/6 h-5/6 px-16">
+                <div className="w-5/6 md:w-4/6 h-5/6 px-16 z-30">
                     <div className="flex flex-col text-center items-center">
                         <h1 className="font-bold text-4xl">Contacta a nuestro equipo</h1>
                         <h3 className="mt-6 text-lg font-light text-gray-400">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu</h3>

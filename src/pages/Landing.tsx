@@ -14,22 +14,22 @@ export const Landing = () => {
                     <h1 className="mr-12 text-3xl text-white font-semibold">Educapp</h1>
                     <div className="flex justify-between items-end">
                         <div className="mr-6 text-gray-100">
-                            <Link to="/" className="mr-1 text-base" href="#n"> Product </Link>
+                            <Link to="/" className="mr-1 text-base" href="#n"> Producto </Link>
                             <FontAwesomeIcon className="text-white text-xs" icon={["fas", "chevron-down"]}/>
                         </div>
                         <div className="mr-6 text-gray-100">
-                            <Link to="/" className="mr-1 text-base" href="#n"> Company </Link>
+                            <Link to="/" className="mr-1 text-base" href="#n"> Nosotros </Link>
                             <FontAwesomeIcon className="text-white text-xs" icon={["fas", "chevron-down"]}/>
                         </div>
                         <div className="mr-6 text-gray-100">
-                            <Link to="/contacto" className="mr-1 text-base" href="#n"> Connect </Link>
+                            <Link to="/contacto" className="mr-1 text-base" href="#n"> Contacto </Link>
                             <FontAwesomeIcon className="text-white text-xs" icon={["fas", "chevron-down"]}/>
                         </div>
                     </div>
                 </div>
                 <div className="">
                     <Link to="/precios" className="py-2 text-base font-normal w-24 text-white mr-4">Precios</Link>
-                    <button className="py-2 text-base font-normal w-24 text-white bg-orange-light rounded-lg mr-4">Login</button>
+                    <Link to="/auth" className="py-2 px-4 text-base font-normal w-24 text-white bg-orange-light rounded-lg mr-4">Registrate</Link>
                 </div>
             </div>
 
