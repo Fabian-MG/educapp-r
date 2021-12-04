@@ -10,6 +10,7 @@ import Table from '../../components/Table/Table'
 import { db } from '../../firebase/firebase.config'
 
 import { Link, useParams } from "react-router-dom";
+import { useAuth } from '../../context/Auth'
 
 const columns = [
     {
@@ -141,6 +142,7 @@ export const Class = () => {
 
 const StudentView = ({setAlertState}: {setAlertState: any}) => {
     const params = useParams<any>()
+    const {user} = useAuth()
     const [form, setForm] = useState(initialForm)
     const [data, setData] = useState<any[]>([])
 
@@ -167,7 +169,7 @@ const StudentView = ({setAlertState}: {setAlertState: any}) => {
     }
 
     const handleSubmit = () => {
-        addDoc(collection(db, "estudiantes"), {...form, clase: params.id}).then( (docRef) => {
+        addDoc(collection(db, "estudiantes"), {...form, clase: params.id, profesorID: user.uid}).then( (docRef) => {
             setData([{id: docRef.id,...form}, ...data,])
             setModalOpen(false)
             setAlertState({isOpen: true, description: "Ve a fondo el perfil del estudiante", title:"Estudiante dado de alta!", type: AlertState.SUCCESS})
